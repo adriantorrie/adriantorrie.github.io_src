@@ -21,14 +21,14 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (('Pelican', 'http://getpelican.com/'),
-         ('Python.org', 'http://python.org/'),
-         ('Jinja2', 'http://jinja.pocoo.org/'),
-         ('You can modify those links in your config file', '#'),)
+# LINKS = (('Pelican', 'http://getpelican.com/'),
+#          ('Python.org', 'http://python.org/'),
+#          ('Jinja2', 'http://jinja.pocoo.org/'),
+#          ('You can modify those links in your config file', '#'),)
 
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+SOCIAL = (('Github', 'https://github.com/adriantorrie'),
+          ('Stackoverflow', 'http://stackoverflow.com/story/adriantorrie'),)
 
 DEFAULT_PAGINATION = 10
 
@@ -38,16 +38,19 @@ DEFAULT_PAGINATION = 10
 # Content admin
 # STATIC_PATHS = ['images', 'figures', 'downloads', 'favicon.png']
 STATIC_PATHS = ['images', 'figures', 'downloads']
-CODE_DIR = 'downloads/code'
-NOTEBOOK_DIR = 'downloads/notebooks'
+IGNORE_FILES = ['.ipynb_checkpoints']
 
 # Theme and plugins
 # For a list and description of plugins visit:
 # https://github.com/getpelican/pelican-plugins/blob/master/Readme.rst
-THEME = "themes/Flex"
-PYGMENTS_STYLE = 'monokai'
+# THEME = "themes/elegant"
+# THEME = "themes/nice-blog"
+THEME = "themes/tuxlite_tbs"
+# PYGMENTS_STYLE = 'monokai'
 
-PLUGIN_PATHS = ['pelican-plugins']
-PLUGINS = ['summary', 'liquid_tags.img', 'liquid_tags.video',
-           'liquid_tags.include_code', 'liquid_tags.notebook',
-           'liquid_tags.literal']
+MARKUP = ('md', )
+PLUGIN_PATHS = ['pelican-plugins', 'plugins']
+PLUGINS = ['ipynb.liquid', 'summary']
+# PLUGINS = ['summary', 'liquid_tags.img', 'liquid_tags.video',
+#            'liquid_tags.include_code', 'liquid_tags.notebook',
+#            'liquid_tags.literal']
