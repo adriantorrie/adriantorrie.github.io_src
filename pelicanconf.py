@@ -6,6 +6,7 @@ AUTHOR = 'Adrian Torrie'
 SITENAME = 'adriantorrie.github.io'
 SITESUBTITLE = 'Python Data Science and Machine Learning portfolio.'
 SITEURL = 'https://adriantorrie.github.io'
+RELATIVE_URLS = True
 CATEGORY_URL = 'category/{slug}.html'
 
 PATH = 'content'
@@ -21,7 +22,7 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-# Blogroll
+
 # LINKS = (('Pelican', 'http://getpelican.com/'),
 #          ('Python.org', 'http://python.org/'),
 #          ('Jinja2', 'http://jinja.pocoo.org/'),
@@ -45,17 +46,19 @@ IGNORE_FILES = ['*.ipynb_checkpoints']
 # Theme and plugins
 # For a list and description of plugins visit:
 # https://github.com/getpelican/pelican-plugins/blob/master/Readme.rst
-# THEME = "themes/elegant"
-# THEME = "themes/nice-blog"
 THEME = "themes/tuxlite_tbs"
-# PYGMENTS_STYLE = 'monokai'
-
 MARKUP = ('md', )
 PLUGIN_PATHS = ['pelican-plugins', 'plugins']
 PLUGINS = ['ipynb.liquid', 'summary']
-# PLUGINS = ['summary', 'liquid_tags.img', 'liquid_tags.video',
-#            'liquid_tags.include_code', 'liquid_tags.notebook',
-#            'liquid_tags.literal']
+
 
 # other
-TYPOGRIFY = True
+TYPOGRIFY = False
+
+
+DELETE_OUTPUT_DIRECTORY = False
+
+# Following items are often useful when publishing
+DISQUS_SITENAME = "adriantorrie-github-io"
+GOOGLE_ANALYTICS = "UA-41099240-3"
+GITHUB_URL = "https://github.com/adriantorrie/adriantorrie.github.io_src"
