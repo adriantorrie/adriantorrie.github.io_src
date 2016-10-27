@@ -20,5 +20,6 @@ DELETE_OUTPUT_DIRECTORY = False
 
 # Following items are often useful when publishing
 
-#DISQUS_SITENAME = ""
-#GOOGLE_ANALYTICS = ""
+DISQUS_SITENAME = "adriantorrie-github-io"
+GOOGLE_ANALYTICS = "UA-41099240-3"
+GITHUB_URL = "https://github.com/adriantorrie"

@@ -5,7 +5,8 @@ from __future__ import unicode_literals
 AUTHOR = 'Adrian Torrie'
 SITENAME = 'adriantorrie.github.io'
 SITESUBTITLE = 'Python Data Science and Machine Learning portfolio.'
-SITEURL = ''
+SITEURL = 'https://adriantorrie.github.io'
+CATEGORY_URL = 'category/{slug}.html'
 
 PATH = 'content'
 
@@ -28,9 +29,10 @@ AUTHOR_FEED_RSS = None
 
 # Social widget
 SOCIAL = (('Github', 'https://github.com/adriantorrie'),
-          ('Stackoverflow', 'http://stackoverflow.com/story/adriantorrie'),)
+          ('Stackoverflow', 'http://stackoverflow.com/story/adriantorrie'),
+          ('LinkedIn', 'https://au.linkedin.com/in/adriantorrie'),)
 
-DEFAULT_PAGINATION = 10
+DEFAULT_PAGINATION = 5
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
@@ -38,7 +40,7 @@ DEFAULT_PAGINATION = 10
 # Content admin
 # STATIC_PATHS = ['images', 'figures', 'downloads', 'favicon.png']
 STATIC_PATHS = ['images', 'figures', 'downloads']
-IGNORE_FILES = ['.ipynb_checkpoints']
+IGNORE_FILES = ['*.ipynb_checkpoints']
 
 # Theme and plugins
 # For a list and description of plugins visit:
@@ -54,3 +56,6 @@ PLUGINS = ['ipynb.liquid', 'summary']
 # PLUGINS = ['summary', 'liquid_tags.img', 'liquid_tags.video',
 #            'liquid_tags.include_code', 'liquid_tags.notebook',
 #            'liquid_tags.literal']
+
+# other
+TYPOGRIFY = True
