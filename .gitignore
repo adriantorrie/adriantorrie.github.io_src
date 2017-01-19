@@ -1,14 +1,17 @@
 *.egg-info/
 *.egg
 .cache
+
 # Translations
 /content/downloads/notebooks/.ipynb_checkpoints
+
 # Sphinx documentation
 coverage.xml
 __pycache__/
 build/
 *.pot
 instance/
+
 # PyBuilder
 # IPython Notebook
 eggs/
@@ -19,22 +22,27 @@ sdist/
 .hypothesis/
 docs/_build/
 parts/
+
 # Spyder project settings
 # PyInstaller
 lib/
 celerybeat-schedule
 nosetests.xml
 dist/
+
 # virtualenv
 .webassets-cache
+
 # pyenv
 lib64/
 venv/
 *.so
 htmlcov/
 .coverage
+
 # celery beat schedule file
 *,cover
+
 # Unit test / coverage reports
 # Scrapy stuff:
 *.log
@@ -42,31 +50,39 @@ htmlcov/
 *.spec
 ENV/
 .Python
+
 #  before PyInstaller builds the exe, so as to inject date/other infos into it.
 # C extensions
 .coverage.*
+
 # Flask stuff:
 .ipynb_checkpoints
 *.manifest
 .env
 *.py[cod]
 local_settings.py
+
 # Distribution / packaging
 pip-log.txt
+
 # Django stuff:
 target/
 develop-eggs/
+
 # Byte-compiled / optimized / DLL files
-downloads/
 pip-delete-this-directory.txt
+
 #  Usually these files are written by a python script from a template
 env/
 .python-version
+
 # Rope project settings
 .eggs/
+
 # dotenv
 .installed.cfg
 *.mo
 .scrapy
 var/
+
 # Installer logs
