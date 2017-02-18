@@ -49,7 +49,7 @@ IGNORE_FILES = ['*.ipynb_checkpoints']
 THEME = "themes/tuxlite_tbs"
 MARKUP = ('md', )
 PLUGIN_PATHS = ['pelican-plugins', 'plugins']
-PLUGINS = ['ipynb.liquid', 'summary']
+PLUGINS = ['ipynb.liquid', 'series', 'summary']
 
 
 # other
