@@ -5,6 +5,6 @@ Category: Quant
 Tags: pandas, numpy, finance, stocks, time-series, jupyter, back-testing, sharpe-ratio, seaborn, investment-performance-analysis, algo-trading, ernie-chan
 Author: Adrian Torrie
 Summary: Part one of a series of posts that will use Ernie Chan's book, Algorithmic Trading, for developing python quant code.
-Series: Python code for Algorithmic Trading
+Series: Python code for the book Algorithmic Trading by Ernie Chan
 
 {% notebook downloads/notebooks/ernie_chan_algo_trading/01_chapter_one_backtesting_and_automated_execution.ipynb %}
