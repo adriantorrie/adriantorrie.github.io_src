@@ -1,4 +1,4 @@
-Title: A Basic Blog for Python Data Science
+Title: A basic blog for Python data science
 Slug: a-basic-blog-for-python-data-science
 Date: 2016-10-18 20:14
 Category: Misc
