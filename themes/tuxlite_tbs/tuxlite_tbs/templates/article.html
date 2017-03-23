@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}{{ SITENAME }} - {{ article.title }}{% endblock %}
+{% block content %}
+    
+
+
+    <div class='article'>
+        <div class="content-title">
+            <h1>{{ article.title }}</h1>
+            {% include "metadata.html" %}
+        </div>
+
+        {% if article.series %}
+            <p>This post is part {{ article.series.index }} of the "{{ article.series.name }}" series:</p>
+            <ol class="parts">
+                {% for part_article in article.series.all %}
+                    <li {% if part_article == article %}class="active"{% endif %}>
+                        <a href='{{ SITEURL }}/{{ part_article.url }}'>{{ part_article.title }}</a>
+                    </li>
+                {% endfor %}
+            </ol>
+        {% endif %}
+
+        {% if article.toc %}
+            <nav class="toc">
+                {{ article.toc }}
+            </nav>
+        {% endif %}
+	
+        <div>{{ article.content }}</div>
+	
+        <hr>
+
+	{% include "twitter.html" %}
+    {% if DISQUS_SITENAME %}
+        <h2>Comments</h2>
+        {% include "disqus.html" %}
+    {% endif %}
+    </div>
+{% endblock %}
