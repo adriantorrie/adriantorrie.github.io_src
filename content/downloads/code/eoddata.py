@@ -38,7 +38,7 @@ class Client():
         return root.get('Token')
             
     # -------------------------------------------------------------------------
-    # visible functions
+    # external functions
     def close_session():
         self._session.close(self)
         

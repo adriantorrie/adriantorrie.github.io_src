@@ -61,4 +61,7 @@ DELETE_OUTPUT_DIRECTORY = False
 # Following items are often useful when publishing
 DISQUS_SITENAME = "adriantorrie-github-io"
 GOOGLE_ANALYTICS = "UA-41099240-3"
-GITHUB_URL = "https://github.com/adriantorrie/adriantorrie.github.io_src"
+GITHUB_URL = "https://github.com/adriantorrie/adriantorrie.github.io_src/content"
+
+FEED_ALL_ATOM = 'feeds/all.atom.xml'
+CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'

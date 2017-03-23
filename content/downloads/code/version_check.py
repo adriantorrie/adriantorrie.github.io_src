@@ -31,3 +31,7 @@ print('scipy:\t\t{}'.format(scipy.__version__))
 # statsmodels
 import statsmodels
 print('statsmodels:\t{}'.format(statsmodels.__version__))
+
+# tensorflow
+import tensorflow
+print('tensorflow:\t{}'.format(tensorflow.__version__))
