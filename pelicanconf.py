@@ -36,7 +36,7 @@ SOCIAL = (('Github', 'https://github.com/adriantorrie'),
 DEFAULT_PAGINATION = 5
 
 # Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+RELATIVE_URLS = True
 
 # Content admin
 # STATIC_PATHS = ['images', 'figures', 'downloads', 'favicon.png']
