@@ -1,3 +1,6 @@
+from collections import OrderedDict
+import json
+import os
 import pandas as pd
 import requests as r
 import xml.etree.cElementTree as etree
@@ -7,10 +10,17 @@ class Client():
     _web_service = 'http://ws.eoddata.com/data.asmx'
     _namespace ='http://ws.eoddata.com/Data'
     
-    def __init__(self, username, password):
+    def __init__(self, username=None, password=None):
         # instance variables
         self._session = r.Session()
-        self._token = self._login(username, password)
+        self._token = self._get_token(username, password)
+        self._exchange_codes = self._get_exchange_codes()
+        
+    def __enter__(self):
+        return self
+        
+    def __exit__(self, *args):
+        self._session.close()
         
     def _web_call(self, call, kwargs, pattern=None):
         """Makes the call to the web sevice.
@@ -39,24 +49,15 @@ class Client():
             # search for the pattern and return a pandas DataFrame
             else:
                 root = etree.parse(response.raw).getroot()
-                elements = root.findall(pattern %(self._namespace))
+                elements = root.findall(pattern % (self._namespace))
                 items = [element.items() for element in elements]
                 
                 temp = []
                 for item in items:
-                    temp.append(dict(item))
+                    temp.append(OrderedDict(item))
                 
                 return pd.DataFrame(temp)
     
-<<<<<<< Updated upstream
-    def _login(self, username, password):
-        call = 'Login'
-        kwargs = {'Username': username, 'Password': password}
-
-        root = self._web_call(call, kwargs)
-        return root.get('Token')
-            
-=======
     def _get_token(self, username=None, password=None):
         # get credentials from file if none are passed in
         if username == None and password == None:
@@ -89,11 +90,10 @@ class Client():
     def _get_exchange_codes(self):
         return list(self.exchange_list()['Code'])
 
->>>>>>> Stashed changes
     # -------------------------------------------------------------------------
-    # external functions
-    def close_session():
-        self._session.close(self)
+    # external functions for accessing fields
+    def close_session(self):
+        self._session.close()
         
     def get_session(self):
         return self._session
@@ -106,10 +106,6 @@ class Client():
             
     def get_token(self):
         return self._token
-<<<<<<< Updated upstream
-        
-    def get_exchange_list(self):
-=======
     
     def get_exchange_codes(self):
         return self._exchange_codes
@@ -124,13 +120,8 @@ class Client():
         return self._web_call(call, kwargs, pattern)
     
     def exchange_list(self):
->>>>>>> Stashed changes
         call = 'ExchangeList'
         kwargs = {'Token': self._token,}
         pattern = ".//{%s}EXCHANGE"
         
         return self._web_call(call, kwargs, pattern)
-        
-    def get_exchange_codes(self):
-        return list(self.get_exchange_list()['Code'])
-

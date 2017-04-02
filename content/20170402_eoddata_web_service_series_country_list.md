@@ -1,4 +1,4 @@
-Title: CountryList()
+Title: CountryList() - Eoddata.com web service blog series
 Slug: eoddata-web-service-calls-country-list
 Date: 2017-04-02 15:03
 Category: Eoddata

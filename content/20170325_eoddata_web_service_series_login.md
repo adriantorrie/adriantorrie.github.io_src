@@ -1,4 +1,4 @@
-Title: Using Python to login to the Eoddata.com web service
+Title: Login() - Eoddata.com web service blog series
 Slug: eoddata-web-service-calls-login
 Date: 2017-03-25 14:02
 Category: Eoddata
